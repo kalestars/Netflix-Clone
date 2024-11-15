@@ -18,6 +18,12 @@ const Banner = () => {
             }
         })()
     }, []);
+useEffect(() => {
+    const fadeBottomElement = document.querySelector('.banner__fadeBottom');
+    if (fadeBottomElement) {
+        fadeBottomElement.style.backgroundImage = 'linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.91), #111)';
+    }
+}, []);
 
     function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + '...' : str;
