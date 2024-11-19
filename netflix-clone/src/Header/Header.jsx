@@ -5,7 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-function Header() {
+const Header = () => {
   return (
     <div className="header_outer_container">
       <div className="header_container">

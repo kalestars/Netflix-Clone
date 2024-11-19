@@ -1,7 +1,7 @@
 import React from "react";
 import Row from "../Row/Row";
 import requests from "../../Utils/requests";
-function RowList() {
+const RowList = () => {
   return (
     <>
       <Row
