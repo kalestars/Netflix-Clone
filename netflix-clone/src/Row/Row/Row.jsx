@@ -3,6 +3,7 @@ import "./row.css";
 import axios from "../../utils/axios";
 import movieTrailer from "movie-trailer";
 import YouTube from "react-youtube";
+import {toast} from "react-toastify"
 const Row = ({ title, fetchUrl, isLargeRow }) => {
   const [movies, setMovie] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
@@ -31,7 +32,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
           console.log(urlParams.get("v"));
           setTrailerUrl(urlParams.get("v"));
         }
-      );
+      ).catch((err)=>toast.error("Trailer not found"));
     }
   };
   const opts = {
